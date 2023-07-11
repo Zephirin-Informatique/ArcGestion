@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ArcGestion.Pages.FormulairePage"
+             Title="Formulaire">
+    <VerticalStackLayout
+        Padding="20"
+        Spacing="10">
+        <Label Text="Libellé" FontSize="16" />
+        <Entry Keyboard="Text" />
+        <Label Text="Catégorie"
+               FontSize="16" />
+        <Picker
+            Title="Choisir une catégorie">
+            <Picker.ItemsSource>
+                <x:Array Type="{x:Type x:String}">
+                    <x:String>Fruits</x:String>
+                    <x:String>Légumes</x:String>
+                    <x:String>Patisserie</x:String>
+                    <x:String>Viandes</x:String>
+                    <x:String>Boisson</x:String>
+                </x:Array>
+            </Picker.ItemsSource>
+        </Picker>
+        <Label Text="Prix"
+               FontSize="16" />
+        <Entry Keyboard="Numeric" />
+        <Label Text="Détails"
+               FontSize="16" />
+        <Editor AutoSize="TextChanges"/>
+        <StackLayout Orientation="Horizontal">
+            <StackLayout Orientation="Vertical">
+                <Label Text="Date enregistrement"
+                       FontSize="16" />
+                <DatePicker />
+            </StackLayout>
+            <StackLayout Orientation="Vertical" HorizontalOptions="EndAndExpand">
+                <Label Text="Date expiration"
+                       FontSize="16" />
+                <DatePicker />
+            </StackLayout>
+        </StackLayout>
+
+        <Button Text="Charger une image"
+                BackgroundColor="{StaticResource Secondary}"
+                TextColor="{StaticResource Primary}"
+                FontAttributes="Bold" FontSize="16"/>
+        <Image />
+
+        <Button
+            Text="Enregistrer"
+            FontSize="16"
+            FontAttributes="Bold"/>
+
+
+    </VerticalStackLayout>
+</ContentPage>
